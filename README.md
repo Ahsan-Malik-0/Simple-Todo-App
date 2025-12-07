@@ -28,7 +28,7 @@
 <pre><code>
 bash
 # Clone the repository
-git clone https://github.com/yourusername/react-todo-app.git
+git clone https://github.com/Ahsan-Malik-0/Simple-Todo-App.git
 
 # Navigate to project directory
 cd react-todo-app
