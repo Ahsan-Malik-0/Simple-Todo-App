@@ -97,7 +97,9 @@ const [record, setRecord] = useState([
 </ul>
 <h2>🔧 Code Examples</h2>
 <h3>Adding a New Todo:</h3>
-<pre><code>javascript const handleSubmit = () => { if (todo.trim() === "") return;
+<pre><code>
+    javascript 
+    const handleSubmit = () => { if (todo.trim() === "") return;
 setRecord([...record, {text: todo, completed: false}]); setTodo(""); }
 </code></pre>
 <h3>Toggling Completion:</h3>
