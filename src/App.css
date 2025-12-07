@@ -1,0 +1,345 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Main Container */
+.input-container {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 30px;
+}
+
+/* Heading */
+.input-container h2 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 25px;
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+/* Input Group */
+.input-tag {
+    margin-bottom: 20px;
+}
+
+.input-tag label {
+    display: block;
+    margin-bottom: 8px;
+    color: #34495e;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.input-tag input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+.input-tag input:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+}
+
+.input-tag input::placeholder {
+    color: #95a5a6;
+}
+
+/* Button */
+.button-tag {
+    margin-top: 10px;
+}
+
+.button-tag button {
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(to right, #3498db, #2980b9);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    letter-spacing: 0.5px;
+}
+
+.button-tag button:hover {
+    background: linear-gradient(to right, #2980b9, #3498db);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(52, 152, 219, 0.4);
+}
+
+.button-tag button:active {
+    transform: translateY(0);
+}
+
+/* Todo List Container */
+.todo-list-container {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+}
+
+.todo-list-container h3 {
+    text-align: center;
+    color: #7f8c8d;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 40px 0;
+}
+
+/* Todo List */
+.todo-list-container ul {
+    list-style-type: none;
+}
+
+.todo-list-container li {
+    padding: 15px;
+    margin-bottom: 12px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    border-left: 4px solid #3498db;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.todo-list-container li:hover {
+    background: #e3f2fd;
+    transform: translateX(5px);
+}
+
+/* Todo Item Text */
+.todo-list-container li span {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 16px;
+    color: #2c3e50;
+    transition: all 0.3s ease;
+}
+
+/* Completed Todo */
+.todo-list-container li span[style*="line-through"] {
+    color: #95a5a6;
+}
+
+/* Buttons Container */
+.todo-list-container li span button {
+    margin-left: 10px;
+    padding: 6px 12px;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+/* Complete Button */
+.todo-list-container li span button:first-of-type {
+    background: #2ecc71;
+    color: white;
+}
+
+.todo-list-container li span button:first-of-type:hover {
+    background: #27ae60;
+    transform: translateY(-1px);
+}
+
+/* Delete Button */
+.todo-list-container li span button:last-of-type {
+    background: #e74c3c;
+    color: white;
+}
+
+.todo-list-container li span button:last-of-type:hover {
+    background: #c0392b;
+    transform: translateY(-1px);
+}
+
+/* Statistics Bar */
+.stats-bar {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: #34495e;
+}
+
+.stats-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.stats-number {
+    font-size: 18px;
+    font-weight: 600;
+    color: #3498db;
+}
+
+/* Empty State Styling */
+.empty-state {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.empty-state-icon {
+    font-size: 48px;
+    margin-bottom: 15px;
+    color: #bdc3c7;
+}
+
+.empty-state h3 {
+    color: #7f8c8d;
+    margin-bottom: 10px;
+}
+
+.empty-state p {
+    color: #95a5a6;
+    font-size: 14px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        padding: 15px;
+    }
+    
+    .input-container,
+    .todo-list-container {
+        padding: 20px;
+    }
+    
+    .input-container h2 {
+        font-size: 1.5rem;
+    }
+    
+    .todo-list-container li {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .todo-list-container li span {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .todo-list-container li span button {
+        margin: 5px 0 0 0;
+        width: 100%;
+    }
+    
+    .stats-bar {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .input-container,
+    .todo-list-container {
+        padding: 15px;
+    }
+    
+    .input-container h2 {
+        font-size: 1.3rem;
+    }
+    
+    .input-tag input {
+        padding: 10px 12px;
+        font-size: 15px;
+    }
+    
+    .button-tag button {
+        padding: 12px;
+        font-size: 15px;
+    }
+    
+    .todo-list-container li {
+        padding: 12px;
+    }
+    
+    .todo-list-container li span {
+        font-size: 15px;
+    }
+}
+
+/* Animation for new todo items */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.todo-list-container li {
+    animation: fadeIn 0.3s ease-out;
+}
+
+/* Checkmark for completed items */
+.completed-checkmark {
+    color: #2ecc71;
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+/* Custom scrollbar for todo list */
+.todo-list-container ul {
+    max-height: 400px;
+    overflow-y: auto;
+    padding-right: 5px;
+}
+
+.todo-list-container ul::-webkit-scrollbar {
+    width: 6px;
+}
+
+.todo-list-container ul::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 3px;
+}
+
+.todo-list-container ul::-webkit-scrollbar-thumb {
+    background: #bdc3c7;
+    border-radius: 3px;
+}
+
+.todo-list-container ul::-webkit-scrollbar-thumb:hover {
+    background: #95a5a6;
+}
