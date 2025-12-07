@@ -96,10 +96,15 @@ const [record, setRecord] = useState([
     <li><strong>Color Coding</strong> - Visual status indicators</li>
 </ul>
 <h2>🔧 Code Examples</h2>
-<h3>Adding a New Todo:</h3> ```javascript const handleSubmit = () => { if (todo.trim() === "") return;
-setRecord([...record, {text: todo, completed: false}]); setTodo(""); } ```<h3>Toggling Completion:</h3> ```javascript
+<h3>Adding a New Todo:</h3>
+<pre><code>javascript const handleSubmit = () => { if (todo.trim() === "") return;
+setRecord([...record, {text: todo, completed: false}]); setTodo(""); }
+</code></pre>
+<h3>Toggling Completion:</h3>
+<pre><code>javascript
 const handleComplete = (index) => { const newTodo = [...record]; newTodo[index].completed = !newTodo[index].completed;
-setRecord(newTodo); } ```
+setRecord(newTodo); }
+</code></pre>
 <h2>📱 Mobile Responsiveness</h2>
 <p>The application is fully responsive with breakpoints at:</p>
 <ul>
